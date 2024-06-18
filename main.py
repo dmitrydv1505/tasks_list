@@ -49,16 +49,6 @@ def move_task_down():
             task_listBox.select_set(index+1)
 
 
-# Кнопки для сортировки списка:
-sort_button = tk.Button(root, text="Сортировать задачи", command=sort_tasks)
-sort_button.pack(pady=5)
-
-# Кнопки для перемещения задач вверх и вниз:
-move_up_button = tk.Button(root, text="Переместить задачу вверх", command=move_task_up)
-move_up_button.pack(pady=5)
-move_down_button = tk.Button(root, text="Переместить задачу вниз", command=move_task_down)
-move_down_button.pack(pady=5)
-
 root = tk.Tk()
 root.title("Task list")
 # tk.Tk().title("Task list")
@@ -85,12 +75,15 @@ text2.pack(pady=5)
 task_listBox = tk.Listbox(root, height=10, width=50, bg="LightPink1")
 task_listBox.pack(padx=5, pady=10)
 
+# Кнопки для сортировки списка:
+sort_button = tk.Button(root, text="Сортировать задачи", command=sort_tasks)
+sort_button.pack(pady=5)
+
+# Кнопки для перемещения задач вверх и вниз:
 move_up_button = tk.Button(root, text="Переместить задачу вверх", command=move_task_up)
 move_up_button.pack(pady=5)
 move_down_button = tk.Button(root, text="Переместить задачу вниз", command=move_task_down)
 move_down_button.pack(pady=5)
 
 
-sort_button = tk.Button(root, text="Сортировать задачи", command=sort_tasks)
-sort_button.pack(pady=5)
 root.mainloop()
